@@ -214,6 +214,11 @@
 
   \end{tikzpicture}%
 
+  \begin{minipage}[b]{\textwidth-\makeletterdetailswidth}%
+    \if@left\raggedright\fi%
+    \if@right\raggedleft\fi%
+    \namestyle{\@firstname\ {\scshape\@lastname}}%
+  \end{minipage}%
   \hfill
   \llap{\usebox{\makeletterdetailsbox}}% \llap is used to suppress 
   \\[.15em]%
