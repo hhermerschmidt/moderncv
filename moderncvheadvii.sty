@@ -154,7 +154,7 @@
         ([xshift=-8em]head-bg.south east) edge[color=headhr!85!black] (head-bg.south east);
   \end{tikzpicture}%
   \if@left%
-    \usebox{\makecvheadpicturebox}%
+    \raisebox{\dimexpr(\ht\makecvheadnamebox-\dp\makecvheadnamebox-\ht\makecvheadpicturebox+\dp\makecvheadpicturebox)/2\relax}{\usebox{\makecvheadpicturebox}}%
     \usebox{\makecvheadnamebox}%
     \hfill%
     \llap{\usebox{\makecvheaddetailsbox}}% \llap is used to suppress the width of the box, allowing overlap if the value of makecvheadnamewidth is forced
@@ -164,7 +164,7 @@
     \rlap{\usebox{\makecvheaddetailsbox}}% \llap is used to suppress the width of the box, allowing overlap if the value of makecvheadnamewidth is forced
     \hfill%
     \usebox{\makecvheadnamebox}%
-    \usebox{\makecvheadpicturebox}\fi%
+    \raisebox{\dimexpr(\ht\makecvheadnamebox-\dp\makecvheadnamebox-\ht\makecvheadpicturebox+\dp\makecvheadpicturebox)/2\relax}{\usebox{\makecvheadpicturebox}}\fi%
   \\[.15em]%
   \tikzmark{head-end}\\[.15em]%
   % optional quote
